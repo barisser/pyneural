@@ -35,3 +35,32 @@ def logisticize_array(a):
     for i in range(0, len(a)):
         a[i] = logistic(a[i])
     return a
+
+def change_base(n, digits, base):
+    a = []
+    while n > 0:
+        r = n % base
+        n = n - r
+        n = n / base
+        a.append(r)
+    a = a[::-1]
+    if len(a) < digits:
+        a = [0] * (digits - len(a)) + a
+    return np.asarray(a)
+
+def base_to_n(b, base):
+    b = b[::-1]
+    n = 0
+    s = 1
+    for x in b:
+        n = n + s * x
+        s = s * base
+    return n
+
+def 2d_neg_array_to_pos_1d(a, r):
+    a = a.flatten()
+    b = len(a)
+    c = np.ones((1, b))
+    a = np.add(a, c)
+    a = np.multiply(a, r / 2)
+    return a
