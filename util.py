@@ -30,3 +30,8 @@ def random_array3d_sum(x,y,z, sum):
     a = random_array_range3d(x,y,z)
     d = np.multiply(a, 1.0/float(sum))
     return d
+
+def logisticize_array(a):
+    for i in range(0, len(a)):
+        a[i] = logistic(a[i])
+    return a
