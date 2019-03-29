@@ -2,6 +2,7 @@ import random
 import util
 import numpy as np
 
+
 class Unit:
     def __init__(self, inputs, outputs, hidden_width, hidden_depth, memory_n):
         self.values = np.zeros((hidden_width, hidden_depth))
