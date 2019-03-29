@@ -23,11 +23,11 @@ def logistic(x):
     return (1.0 / (1.0 + math.pow(2.7, -1 * x)))
 
 def ones_array_sum(x, y, sum):
-    a = np.ones((x,y))
+    a = np.ones((x, y))
     return a.multiply(a, 1.0/float(sum))
 
-def random_array3d_sum(x,y,z, sum):
-    a = random_array_range3d(x,y,z)
+def random_array3d_sum(x, y, z, sum):
+    a = random_array_range3d(x, y, z)
     d = np.multiply(a, 1.0/float(sum))
     return d
 
