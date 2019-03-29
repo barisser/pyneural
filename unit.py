@@ -97,7 +97,7 @@ class Unit:
         return a
 
 
-a=Unit(3,5,20,3,10)
-i = np.ones((1,3))
+a=Unit(3, 5, 20, 3, 10)
+i = np.ones((1, 3))
 c = a.serialize()
 #b=a.run(i)
